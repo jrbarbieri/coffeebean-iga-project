@@ -4,7 +4,7 @@ class CreateCertificationUserApprovals < ActiveRecord::Migration[7.1]
       t.string :status
       t.references :certification_campaign, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
-      t.references :entitlements, null: false, foreign_key: true
+      t.references :entitlement, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -1,5 +1,5 @@
 class CertificationUserApproval < ApplicationRecord
   belongs_to :certification_campaign
   belongs_to :user
-  belongs_to :entitlements
+  belongs_to :entitlement
 end
