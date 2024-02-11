@@ -8,5 +8,5 @@ Com Ruby versão superior a 3 e o Rails versão superior ao 7 instalados, baixe 
 
 ## Diagrama de Entidade Relacional
 
-![erd](./erd.pdf)
+![Clique aqui para ver o diagrama](./erd.pdf)
 
