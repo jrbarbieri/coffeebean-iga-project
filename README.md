@@ -1,24 +1,12 @@
-# README
+## Introduçáo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto construído para a CoffeeBean Technology;
 
-Things you may want to cover:
+## Instalação
 
-* Ruby version
+Com Ruby versão superior a 3 e o Rails versão superior ao 7 instalados, baixe este projeto, acesse seu diretório e rode o comando bundle install para instalar as dependências.
 
-* System dependencies
+## Diagrama de Entidade Relacional
 
-* Configuration
+![erd](./erd.pdf)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
