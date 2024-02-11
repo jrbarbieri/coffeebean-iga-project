@@ -2,7 +2,7 @@
   Resource.find_or_create_by!(name: resource_name)
 end
 
-["João", "Rita", "Rodrigo", "Maria"].each do |user_name|
+["João", "Rita", "Rodrigo", "Maria", "Erico"].each do |user_name|
   User.find_or_create_by!(name: user_name)
 end
 
@@ -26,14 +26,14 @@ Entitlement::BiAnalyst.find_or_create_by!(
   resource: Resource.find_by(name: "Tableau")
 )
 
-CertificationCampaign.find_or_create_by!(
+certification_campaign = CertificationCampaign.find_or_create_by!(
   start_date: Date.today,
   duration: 90
 )
 
-CertificationUserApproval.find_or_create_by!(
-  certification_campaign: CertificationCampaign.first,
-  entitlement: Entitlement.first
-)
-
-
+Entitlement.all.each do |entitlement|
+  CertificationUserApproval.find_or_create_by!(
+    certification_campaign: certification_campaign,
+    entitlement: entitlement
+  )
+end
