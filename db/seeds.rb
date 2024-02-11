@@ -26,4 +26,14 @@ Entitlement::BiAnalyst.find_or_create_by!(
   resource: Resource.find_by(name: "Tableau")
 )
 
+CertificationCampaign.find_or_create_by!(
+  start_date: Date.today,
+  duration: 90
+)
+
+CertificationUserApproval.find_or_create_by!(
+  certification_campaign: CertificationCampaign.first,
+  entitlement: Entitlement.first
+)
+
 

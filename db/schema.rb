@@ -21,13 +21,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_11_161345) do
   create_table "certification_user_approvals", force: :cascade do |t|
     t.string "status"
     t.integer "certification_campaign_id", null: false
-    t.integer "user_id", null: false
     t.integer "entitlement_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["certification_campaign_id"], name: "idx_on_certification_campaign_id_fbf51e74e2"
     t.index ["entitlement_id"], name: "index_certification_user_approvals_on_entitlement_id"
-    t.index ["user_id"], name: "index_certification_user_approvals_on_user_id"
   end
 
   create_table "entitlements", force: :cascade do |t|
@@ -55,7 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_11_161345) do
 
   add_foreign_key "certification_user_approvals", "certification_campaigns"
   add_foreign_key "certification_user_approvals", "entitlements"
-  add_foreign_key "certification_user_approvals", "users"
   add_foreign_key "entitlements", "resources"
   add_foreign_key "entitlements", "users"
 end
