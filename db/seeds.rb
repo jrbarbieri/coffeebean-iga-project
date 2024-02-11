@@ -6,26 +6,22 @@ end
   User.find_or_create_by!(name: user_name)
 end
 
-Entitlement.find_or_create_by!(
-  role: :project_manager,
+Entitlement::ProjectManager.find_or_create_by!(
   user: User.find_by(name: "João"),
   resource: Resource.find_by(name: "Pipedrive")
 )
 
-Entitlement.find_or_create_by!(
-  role: :payment_manager,
+Entitlement::PaymentManager.find_or_create_by!(
   user: User.find_by(name: "Rita"),
   resource: Resource.find_by(name: "AWS")
 )
 
-Entitlement.find_or_create_by!(
-  role: :database_analyst,
+Entitlement::DatabaseAnalyst.find_or_create_by!(
   user: User.find_by(name: "Rodrigo"),
   resource: Resource.find_by(name: "AWS")
 )
 
-Entitlement.find_or_create_by!(
-  role: :bi_analyst,
+Entitlement::BiAnalyst.find_or_create_by!(
   user: User.find_by(name: "Maria"),
   resource: Resource.find_by(name: "Tableau")
 )

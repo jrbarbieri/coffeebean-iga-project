@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_11_161345) do
   end
 
   create_table "entitlements", force: :cascade do |t|
-    t.string "role"
+    t.string "type"
     t.string "status"
     t.integer "user_id", null: false
     t.integer "resource_id", null: false

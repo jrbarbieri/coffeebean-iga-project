@@ -3,11 +3,6 @@ class Entitlement < ApplicationRecord
   belongs_to :resource
   has_many :certification_user_approvals
 
-  enum role: {
-    project_manager: "project_manager",
-    payment_manager: "payment_manager",
-    database_analyst: "database_analyst",
-    bi_analyst: "bi_analyst"
-  }
+  enum :status, { pending: 'pending', active: 'active', rejected: 'rejected' }, default: :pending
 end
 
