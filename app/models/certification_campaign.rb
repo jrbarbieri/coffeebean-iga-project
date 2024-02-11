@@ -1,0 +1,2 @@
+class CertificationCampaign < ApplicationRecord
+end
